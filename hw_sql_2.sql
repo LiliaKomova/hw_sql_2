@@ -12,9 +12,9 @@ CREATE TABLE musician
 
 CREATE TABLE MusicainGenre
 (
-	id SERIAL PRIMARY KEY,
 	musician INTEGER REFERENCES musician(id),
-	genre INTEGER REFERENCES musical_genre(id)
+	genre INTEGER REFERENCES musical_genre(id),
+	CONSTRAINT muciciangenre_pk PRIMARY KEY (id,id)
 );
 
 CREATE TABLE album
@@ -26,9 +26,9 @@ CREATE TABLE album
 
 CREATE TABLE MusicianAlbum
 (
-	id SERIAL PRIMARY KEY,
 	musician INTEGER REFERENCES musician(id),
-	album INTEGER REFERENCES album(id)
+	album INTEGER REFERENCES album(id),
+	CONSTRAINT mucicianalbum_pk PRIMARY KEY (id,id)
 );
 
 CREATE TABLE track
