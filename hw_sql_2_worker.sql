@@ -1,0 +1,14 @@
+CREATE TABLE chief
+(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(64) NOT NULL,
+	department VARCHAR(128) NOT NULL
+);
+
+CREATE TABLE worker
+(
+	id SERIAL PRIMARY KEY,
+	name VARCHAR(64) NOT NULL,
+	department VARCHAR(128) NOT NULL,
+	superior INTEGER REFERENCES chief(id)
+);
