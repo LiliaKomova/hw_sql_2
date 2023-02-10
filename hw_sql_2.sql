@@ -10,11 +10,11 @@ CREATE TABLE musician
 	name varchar(128) NOT NULL
 );
 
-CREATE TABLE MusicainGenre
+CREATE TABLE musician_genre
 (
-	musician INTEGER REFERENCES musician(id),
-	genre INTEGER REFERENCES musical_genre(id),
-	CONSTRAINT muciciangenre_pk PRIMARY KEY (id,id)
+	musician_id INTEGER REFERENCES musician(id),
+	genre_id INTEGER REFERENCES musical_genre(id),
+	CONSTRAINT musician_genre_pk PRIMARY KEY (musician_id, genre_id)
 );
 
 CREATE TABLE album
@@ -24,11 +24,11 @@ CREATE TABLE album
 	release DATE
 );
 
-CREATE TABLE MusicianAlbum
+CREATE TABLE musician_album
 (
-	musician INTEGER REFERENCES musician(id),
-	album INTEGER REFERENCES album(id),
-	CONSTRAINT mucicianalbum_pk PRIMARY KEY (id,id)
+	musician_id INTEGER REFERENCES musician(id),
+	album_id INTEGER REFERENCES album(id),
+	CONSTRAINT musician_album_pk PRIMARY KEY (musician_id, album_id)
 );
 
 CREATE TABLE track
@@ -43,6 +43,12 @@ CREATE TABLE treasure
 (
 	id SERIAL PRIMARY KEY,
 	name VARCHAR(64) NOT NULL,
-	release	DATE,
-	track INTEGER REFERENCES track(id)
+	release	DATE
+);
+
+CREATE TABLE treasure_track
+(
+	track_id INTEGER REFERENCES track(id),
+	treasure_id INTEGER REFERENCES treasure(id),
+	CONSTRAINT treasure_track_pk PRIMARY KEY (track_id, treasure_id)
 );
