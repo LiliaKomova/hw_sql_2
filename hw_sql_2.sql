@@ -1,3 +1,12 @@
+DROP TABLE IF EXISTS musician_genre;
+DROP TABLE IF EXISTS musical_genre;
+DROP TABLE IF EXISTS musician_album;
+DROP TABLE IF EXISTS musician;
+DROP TABLE IF EXISTS treasure_track;
+DROP TABLE IF EXISTS track;
+DROP TABLE IF EXISTS album;
+DROP TABLE IF EXISTS treasure;
+
 CREATE TABLE musical_genre
 (
 	id SERIAL PRIMARY KEY,
