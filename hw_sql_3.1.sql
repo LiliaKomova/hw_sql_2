@@ -90,7 +90,8 @@ VALUES
 (24, 'Something About Maggie', '00:03:20', 8),
 (25, 'Coming in From The Cold', '00:04:31', 9),
 (26, 'Real Situation', '00:04:31', 9),
-(27, 'Forever Loving Jah', '00:03:56', 9);
+(27, 'Nothing Inside','00:02:52' , 1),
+(28, 'kiss kiss', '00:02:18', 1);
 
 INSERT INTO treasure
 VALUES

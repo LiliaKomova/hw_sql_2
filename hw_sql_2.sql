@@ -10,13 +10,13 @@ DROP TABLE IF EXISTS treasure;
 CREATE TABLE musical_genre
 (
 	id SERIAL PRIMARY KEY,
-	name varchar(128) NOT NULL
+	name varchar(30) UNIQUE NOT NULL
 );
 
 CREATE TABLE musician
 (
 	id SERIAL PRIMARY KEY,
-	name varchar(128) NOT NULL
+	name varchar(30) NOT NULL
 );
 
 CREATE TABLE musician_genre
@@ -29,7 +29,7 @@ CREATE TABLE musician_genre
 CREATE TABLE album
 (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(128) NOT NULL,
+	title VARCHAR(64) NOT NULL,
 	release DATE
 );
 
@@ -51,7 +51,7 @@ CREATE TABLE track
 CREATE TABLE treasure
 (
 	id SERIAL PRIMARY KEY,
-	name VARCHAR(64) NOT NULL,
+	name VARCHAR(64) UNIQUE NOT NULL,
 	release	DATE
 );
 
